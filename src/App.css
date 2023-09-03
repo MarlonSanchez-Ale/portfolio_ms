@@ -1,5 +1,15 @@
 .App {
   text-align: center;
+  background: #282c34;
+}
+
+.Card  {
+  background: #1a2231;
+
+}
+.CardHeader {
+  background: #1a2231;
+
 }
 
 .App-logo {
