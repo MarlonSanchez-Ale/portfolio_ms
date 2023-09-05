@@ -52,7 +52,7 @@ export default function HomeSection() {
                                 Marlon Sánchez
                             </Typography>
                             <Typography className="font-medium text-gray-600" textGradient>
-                                I'm a Systems engineer and Web Developer
+                                I'm a Systems Engineer and Web Developer
                             </Typography>
                         </div>
                         <div className="flex flex-row justify-center gap-5 ">

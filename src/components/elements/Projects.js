@@ -30,7 +30,7 @@ export default function Project() {
         {
             title: "Puntos Luz",
             image: "/images/PuntosLuz.png",
-            description: "Project developed for the company The Data Age, I collaborated in the direction of project development and maintenance.  The web application was created with next js, material ui and put into production with Azure.",
+            description: "Project developed for the company The Data Age, I collaborated in the direction of project development and maintenance.  The web application was created with Next js, Material UI and put into production with Azure.",
             skill: [{ value: "Next js", icon: <TbBrandNextjs size={20} /> }],
             url: "",
             seeMore: false
@@ -38,7 +38,7 @@ export default function Project() {
         {
             title: "Tasa Poste",
             image: "/images/TasaPoste.png",
-            description: "Project developed for the company The Data Age, I collaborated in the development of the frontend.  The web application was created with next js, bootstrap and put into production with Azure.",
+            description: "Project developed for the company The Data Age, I collaborated in the development of the frontend.  The web application was created with Next js, Bootstrap and put into production with Azure.",
             skill: [{ value: "Next js", icon: <TbBrandNextjs size={20} /> }],
             url: "",
             seeMore: false
@@ -54,7 +54,7 @@ export default function Project() {
         {
             title: "Books Manager",
             image: "/images/FreeBook.png",
-            description: "Test project for handling books, manages the list of books presented to the users as a gallery and the users collection.  Created with React, Tailwind, global application health management with Redux-Toolkit and Auth0.",
+            description: "Test project for handling books, manages the list of books presented to the users as a gallery and the users collection.  Created with React JS, Tailwind, global application health management with Redux-Toolkit and Auth0.",
             skill: [{ value: "React js", icon: <FaReact size={20} /> }],
             url: "https://free-books-collection.netlify.app",
             seeMore: true
@@ -110,7 +110,7 @@ function ProjectBox(title, image, description, skill, seeMore, url, index) {
 
     return (
         <>
-            <Card key={index} className="w-full max-w-[24rem] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
+            <Card className="w-full max-w-[24rem] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500 sm:max-w-[32rem] md:max-w-[24rem]">
                 <CardHeader
                     floated={false}
                     shadow={false}

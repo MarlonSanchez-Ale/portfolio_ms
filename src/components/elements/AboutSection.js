@@ -93,7 +93,7 @@ export default function AboutSection() {
                                             <BsCheckCircle size={30} color="orange" />
                                         </TimelineIcon>
                                         <Typography variant="h5" className="text-gray-700">
-                                            Need web Developer?
+                                            Need Web Developer?
                                         </Typography>
                                     </TimelineHeader>
                                     <TimelineBody className="pb-8">
@@ -103,8 +103,8 @@ export default function AboutSection() {
                                                     I can help you!
                                                 </Typography>
                                                 <Typography color="gary" className="font-normal text-gray-600 text-start">
-                                                    I am a Systems Engineer graduated from the national university of engineering, Nicaragua, passionate about web development with an emphasis on the front-end and willing to keep learning.
-                                                    I am characterized by being a disciplined, responsible and dedicated person.
+                                                    I'm a Systems Engineer graduated from the National University of Engineering, Nicaragua, passionate about web development with an emphasis on the front-end and willing to keep learning.
+                                                    I'm characterized by being a disciplined, responsible and dedicated person.
                                                 </Typography>
                                             </div>
                                             <div>
