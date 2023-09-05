@@ -2,7 +2,7 @@ import {
     Typography,
     Avatar,
 } from "@material-tailwind/react";
-import { BsWhatsapp } from "react-icons/bs";
+import { BsWhatsapp, BsGithub } from "react-icons/bs";
 import { ImLinkedin, ImInstagram } from "react-icons/im";
 import { motion } from 'framer-motion'
 import { MdOutgoingMail } from 'react-icons/md'
@@ -24,6 +24,7 @@ export default function Contact() {
     const UrlInstagram = "https://instagram.com/marlonsanchez583?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="
     const UrlLinkedin = "https://www.linkedin.com/in/marlon-josué-sánchez-alemán-84688b1b6"
     const UrlWhatsapp = "https://wa.link/0wbnnc"
+    const UrlGithub = "https://github.com/MarlonSanchez-Ale"
 
     return (
         <section className=" py-32 bg-white sm:px-10">
@@ -66,6 +67,9 @@ export default function Contact() {
                     </span>
                     <span onClick={() => window.open(UrlWhatsapp, '_blank')} className="cursor-pointer shadow-md rounded-full border border-gray-900/5 bg-gray-200/5 p-3 text-gray-900 transition-colors hover:border-orange-500 hover:!opacity-100 group-hover:opacity-70">
                         <BsWhatsapp size={20} color="orange" />
+                    </span>
+                    <span onClick={() => window.open(UrlGithub, '_blank')} className="cursor-pointer shadow-md rounded-full border border-gray-900/5 bg-gray-200/5 p-3 text-gray-900 transition-colors hover:border-orange-500 hover:!opacity-100 group-hover:opacity-70">
+                        <BsGithub size={20} color="orange" />
                     </span>
                 </div>
             </motion.div>

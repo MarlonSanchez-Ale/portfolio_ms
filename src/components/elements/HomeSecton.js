@@ -1,5 +1,5 @@
 import { Avatar, Typography, IconButton, Chip } from "@material-tailwind/react"
-import { BsInstagram, BsLinkedin, BsFiletypeHtml, BsFiletypeCss, BsWordpress, BsWhatsapp } from "react-icons/bs";
+import { BsInstagram, BsLinkedin, BsFiletypeHtml, BsFiletypeCss, BsWordpress, BsWhatsapp, BsGithub } from "react-icons/bs";
 import { IoLogoJavascript } from 'react-icons/io'
 import { FaReact } from 'react-icons/fa'
 import { TbBrandNextjs } from 'react-icons/tb'
@@ -24,6 +24,7 @@ export default function HomeSection() {
     const UrlInstagram = "https://instagram.com/marlonsanchez583?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="
     const UrlLinkedin = "https://www.linkedin.com/in/marlon-josué-sánchez-alemán-84688b1b6"
     const UrlWhatsapp = "https://wa.link/0wbnnc"
+    const UrlGithub = "https://github.com/MarlonSanchez-Ale"
 
 
     return (
@@ -63,6 +64,9 @@ export default function HomeSection() {
                             </IconButton>
                             <IconButton onClick={() => window.open(UrlWhatsapp, '_blank')} variant="text" className="hover:bg-gray-100 hover:shadow-md">
                                 <BsWhatsapp size={20} color="orange" />
+                            </IconButton>
+                            <IconButton onClick={() => window.open(UrlGithub, '_blank')} variant="text" className="hover:bg-gray-100 hover:shadow-md">
+                                <BsGithub size={20} color="orange" />
                             </IconButton>
                         </div>
                         <div className="grid place-items-center my-10">
