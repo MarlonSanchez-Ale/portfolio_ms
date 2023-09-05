@@ -1,57 +1,86 @@
 import { Avatar, Typography, IconButton, Chip } from "@material-tailwind/react"
-import { BsInstagram, BsLinkedin, BsGoogle, BsChevronDown, BsFiletypeHtml, BsFiletypeCss } from "react-icons/bs";
+import { BsInstagram, BsLinkedin, BsFiletypeHtml, BsFiletypeCss, BsWordpress, BsWhatsapp } from "react-icons/bs";
 import { IoLogoJavascript } from 'react-icons/io'
 import { FaReact } from 'react-icons/fa'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { SiMui, SiTailwindcss } from 'react-icons/si'
+import { motion, MotionConfig } from 'framer-motion'
+
+const fadeInAnimationVariants = {
+    initial: {
+        opacity: 0,
+        y: 0,
+    },
+    animate: {
+        opacity: 1,
+        y: -50,
+
+    }
+}
+
 
 export default function HomeSection() {
+
+    const UrlInstagram = "https://instagram.com/marlonsanchez583?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="
+    const UrlLinkedin = "https://www.linkedin.com/in/marlon-josué-sánchez-alemán-84688b1b6"
+    const UrlWhatsapp = "https://wa.link/0wbnnc"
+
+
     return (
-        <section className="py-28">
-            <div className="flex flex-col justify-center p-4 gap-3 text-center text-gray-100">
-                <div>
-                    <Avatar
-                        size="lg"
-                        alt="avatar"
-                        sizes={50}
-                        src="/images/autor.jpeg"
-                        className="border w-40 h-40 border-green-500 shadow-xl shadow-green-900/20 ring-4 ring-green-500/30"
-                    />
-                </div>
-                <div className="flex flex-col justify-center gap-5">
+        <MotionConfig transition={{ duration: 1 }}>
+            <motion.section
+                className="py-32"
+                variants={fadeInAnimationVariants}
+                initial="initial"
+                whileInView="animate"
+                transition={{ type: "spring", delay: 1 }}
+            >
+                <div className="flex flex-col justify-center p-4 gap-5 text-center text-gray-100">
                     <div>
-                        <Typography variant="h4" color="gray-200" className="mb-2">
-                            Marlon Sánchez
-                        </Typography>
-                        <Typography color="gray" className="font-medium" textGradient>
-                            I'm a Systems engineer and Web Developer
-                        </Typography>
+                        <Avatar
+                            size="lg"
+                            alt="avatar"
+                            sizes={50}
+                            src="/images/foto1.png"
+                            className="border border-orange-500 w-40 h-40 shadow-2xl bg-gray-200 ring-4 ring-gray-200 hover:ring-gray-200/30"
+                        />
                     </div>
-                    <div className="flex flex-row justify-center gap-5">
-                        <BsInstagram size={20} color="white" />
-                        <BsLinkedin size={20} color="white" />
-                        <BsGoogle size={20} color="white" />
-                    </div>
-                    <div className="grid place-items-center my-10">
-                        <div className="flex gap-2">
-                            <Chip value="Javascript" className=" hover:bg-blue-gray-800" icon={<IoLogoJavascript />} />
-                            <Chip value="React Js" className=" hover:bg-blue-gray-800" icon={<FaReact />} />
-                            <Chip value="Next Js" className=" hover:bg-blue-gray-800" icon={<TbBrandNextjs />} />
-                            <Chip value="HTML" className=" hover:bg-blue-gray-800" icon={<BsFiletypeHtml />} />
-                            <Chip value="CSS" className=" hover:bg-blue-gray-800" icon={<BsFiletypeCss />} />
-                            <Chip value="Talwind" className=" hover:bg-blue-gray-800" icon={<SiTailwindcss />} />
-                            <Chip value="Material UI" className=" hover:bg-blue-gray-800" icon={<SiMui />} />
+                    <div className="flex flex-col justify-center gap-5">
+                        <div>
+                            <Typography variant="h4" className="mb-2 text-gray-800" textGradient>
+                                Marlon Sánchez
+                            </Typography>
+                            <Typography className="font-medium text-gray-600" textGradient>
+                                I'm a Systems engineer and Web Developer
+                            </Typography>
+                        </div>
+                        <div className="flex flex-row justify-center gap-5">
+                            <IconButton onClick={() => window.open(UrlInstagram, '_blank')} variant="text" className="hover:bg-gray-100 hover:shadow-md">
+                                <BsInstagram size={20} color="orange" />
+                            </IconButton>
+                            <IconButton onClick={() => window.open(UrlLinkedin, '_blank')} variant="text" className="hover:bg-gray-100 hover:shadow-md">
+                                <BsLinkedin size={20} color="orange" />
+                            </IconButton>
+                            <IconButton onClick={() => window.open(UrlWhatsapp, '_blank')} variant="text" className="hover:bg-gray-100 hover:shadow-md">
+                                <BsWhatsapp size={20} color="orange" />
+                            </IconButton>
+                        </div>
+                        <div className="grid place-items-center my-10">
+                            <div className="flex gap-5" >
+                                <Chip value="Javascript" className=" hover:bg-orange-500" icon={<IoLogoJavascript size={20} />} />
+                                <Chip value="React Js" className=" hover:bg-orange-500" icon={<FaReact size={20} />} />
+                                <Chip value="Next Js" className=" hover:bg-orange-500" icon={<TbBrandNextjs size={20} />} />
+                                <Chip value="HTML" className=" hover:bg-orange-500" icon={<BsFiletypeHtml size={20} />} />
+                                <Chip value="CSS" className=" hover:bg-orange-500" icon={<BsFiletypeCss size={20} />} />
+                                <Chip value="Talwind" className=" hover:bg-orange-500" icon={<SiTailwindcss size={20} />} />
+                                <Chip value="Material UI" className="hover:bg-orange-500" icon={<SiMui size={18} />} />
+                                <Chip value="Wordpress" className="hover:bg-orange-500" icon={<BsWordpress size={18} />} />
+                            </div>
                         </div>
                     </div>
                 </div>
-
-
-                <div className="grid place-items-center my-10">
-                    <IconButton variant="outlined" >
-                        <BsChevronDown size={30} color="white" />
-                    </IconButton>
-                </div>
-            </div>
-        </section>
+            </motion.section>
+        </MotionConfig>
     )
 }
+
