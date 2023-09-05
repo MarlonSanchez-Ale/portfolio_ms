@@ -54,7 +54,7 @@ export default function HomeSection() {
                                 I'm a Systems engineer and Web Developer
                             </Typography>
                         </div>
-                        <div className="flex flex-row justify-center gap-5">
+                        <div className="flex flex-row justify-center gap-5 ">
                             <IconButton onClick={() => window.open(UrlInstagram, '_blank')} variant="text" className="hover:bg-gray-100 hover:shadow-md">
                                 <BsInstagram size={20} color="orange" />
                             </IconButton>
@@ -66,7 +66,7 @@ export default function HomeSection() {
                             </IconButton>
                         </div>
                         <div className="grid place-items-center my-10">
-                            <div className="flex gap-5" >
+                            <div className="grid gap-5 sm:grid-cols-3 md:grid-flow-col" >
                                 <Chip value="Javascript" className=" hover:bg-orange-500" icon={<IoLogoJavascript size={20} />} />
                                 <Chip value="React Js" className=" hover:bg-orange-500" icon={<FaReact size={20} />} />
                                 <Chip value="Next Js" className=" hover:bg-orange-500" icon={<TbBrandNextjs size={20} />} />
