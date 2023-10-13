@@ -127,8 +127,10 @@ export default function Project() {
             transition={{ type: "spring", delay: 1 }}
         >
             <div className="flex flex-col justify-center text-center">
-                <Typography variant="h2" className="text-gray-800">Some projects</Typography>
-                <Typography className="text-gray-700">Web projects developed and published, using agile methodologies, and focused on work as a Frontend.</Typography>
+                <div className="grid place-items-center p-5">
+                    <Typography variant="h2" className="text-gray-800">Some projects</Typography>
+                    <Typography className="text-gray-700">Web projects developed and published, using agile methodologies, and focused on work as a Frontend.</Typography>
+                </div>
                 <div className="grid place-items-center sm:p-5 lg:p-10">
                     <Tabs value="Javascript">
                         <TabsHeader>
@@ -144,7 +146,7 @@ export default function Project() {
                         <TabsBody>
                             {data.map(({ value }) => (
                                 <TabPanel key={value} value={value}>
-                                    <div className="grid grid-flow-row gap-8 my-10 p-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+                                    <div className="grid grid-flow-row gap-8 my-10 p-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
                                         {myprojects && myprojects?.filter(({ skill }) => value ? skill?.language.includes(value) : true)
                                             .map(({ title, image, description, skill, seeMore, url }, index) => (
                                                 ProjectBox(title, image, description, skill, seeMore, url, index)
