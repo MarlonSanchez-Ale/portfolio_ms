@@ -86,8 +86,8 @@ export default function Project() {
             image: "/images/FeriaNacionalTierra.png",
             description: "Project developed for a non-profit association called Jóvenes Ambientalistas, I collaborated in the development of the website.  The website was created with WordPress, using a template in Elementor.",
             skill: { language: "Wordpress", framework: "Wordpress", icon: <BsWordpress size={20} /> },
-            url: "https://ferianacionaldelatierra.info",
-            seeMore: true
+            url: "",
+            seeMore: false
         },
         {
             title: "Dev Challenges",
