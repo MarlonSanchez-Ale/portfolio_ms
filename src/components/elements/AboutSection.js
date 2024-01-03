@@ -31,7 +31,7 @@ export default function AboutSection() {
 
     function descargarPDF() {
         // Ruta al archivo PDF dentro de la carpeta "public"
-        const rutaPDF = '/doc/cv.pdf';
+        const rutaPDF = '/doc/CV - MARLON SÁNCHEZ.pdf';
 
         // Crea una URL para el archivo PDF
         const urlPDF = process.env.PUBLIC_URL + rutaPDF;
