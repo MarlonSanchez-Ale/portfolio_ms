@@ -92,9 +92,17 @@ export default function Project() {
         {
             title: "Dev Challenges",
             image: "/images/DevChallenges.png",
-            description: "Study project inspired by challenges from the Dev Challenges website.",
+            description: "Study project inspired by Challenges from the Dev Challenges website.",
             skill: { language: "Typescript", framework: "React Js", icon: <FaReact size={20} /> },
             url: "https://ms-dev-challenges.netlify.app",
+            seeMore: true
+        },
+        {
+            title: "Delivery Manager",
+            image: "/images/deliveryManager.png",
+            description: "Order management project, use redux for the global status management of the application, also the DND-KIT library to add the animation of manually ordering the order boxes.",
+            skill: { language: "Typescript", framework: "React Js", icon: <FaReact size={20} /> },
+            url: "https://deliverymanager.netlify.app",
             seeMore: true
         },
     ]
