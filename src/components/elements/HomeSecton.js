@@ -1,6 +1,7 @@
 import { Avatar, Typography, IconButton, Chip } from "@material-tailwind/react"
 import { BsInstagram, BsLinkedin, BsFiletypeHtml, BsFiletypeCss, BsWordpress, BsWhatsapp, BsGithub } from "react-icons/bs";
 import { IoLogoJavascript } from 'react-icons/io'
+import { TbBrandTypescript } from "react-icons/tb";
 import { FaReact } from 'react-icons/fa'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { SiMui, SiTailwindcss } from 'react-icons/si'
@@ -72,6 +73,7 @@ export default function HomeSection() {
                         <div className="grid place-items-center my-10">
                             <div className="grid gap-5 sm:grid-cols-3 md:grid-flow-col" >
                                 <Chip value="Javascript" className=" hover:bg-orange-500" icon={<IoLogoJavascript size={20} />} />
+                                <Chip value="Typescript" className="hover:bg-orange-500" icon={<TbBrandTypescript size={20} />} />
                                 <Chip value="React Js" className=" hover:bg-orange-500" icon={<FaReact size={20} />} />
                                 <Chip value="Next Js" className=" hover:bg-orange-500" icon={<TbBrandNextjs size={20} />} />
                                 <Chip value="HTML" className=" hover:bg-orange-500" icon={<BsFiletypeHtml size={20} />} />
