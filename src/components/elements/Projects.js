@@ -36,7 +36,7 @@ export default function Project() {
         {
             title: "Puntos Luz",
             image: "/images/PuntosLuz.png",
-            description: "Project developed for the company The Data Age, I collaborated in the direction of project development and maintenance.  The web application was created with Next js, Material UI and put into production with Azure.",
+            description: "Estuvé a cargo del soporte y mantenimiento de la aplicación web Puntos Luz. Colaboré en la reorganización de los endpoints y reconstrucción de los mismos para un mejor funcionamiento y corrección de errores, el frontend fue actualizado en pro de la experiencia de usuario.",
             skill: { language: "Javascript", framework: "Next js", icon: <TbBrandNextjs size={20} /> },
             url: "",
             seeMore: false
@@ -44,31 +44,31 @@ export default function Project() {
         {
             title: "Tasa Poste",
             image: "/images/TasaPoste.png",
-            description: "Project developed for the company The Data Age, I collaborated in the development of the frontend.  The web application was created with Next js, Bootstrap and put into production with Azure.",
+            description: "Colaboré en la creación de la aplicación web Tasa Poste, fui parte del equipo de desarrollo, cumpliendo funciones en la construcción del backend y frontend de la web. Realicé administracción de usuarios, login y creación de interfacez gráficas guíadas por la experiencia de usuario.",
             skill: { language: "Javascript", framework: "Next js", icon: <TbBrandNextjs size={20} /> },
             url: "",
             seeMore: false
         },
         {
-            title: "Task Manager",
+            title: "Administrador de tareas",
             image: "/images/TaskManager.png",
-            description: "Study project to handle tasks, manages the registration of tasks, editing, completed tasks, deletion.  Created with Reactjs, Tailwind and global application status management with Redux - Toolkit.",
+            description: "Proyecto de estudio, aprendí mucho sobre la administración de estados globales con redux toolkit, mejoré mis conocimientos en Tailwinds para la administración de temas, colores y estilos. El diseño está centrado en la creación rápida de tareas y el control de estados de la actividad.",
             skill: { language: "Javascript", framework: "React js", icon: <FaReact size={20} /> },
             url: "https://to-do-react-ms.netlify.app",
             seeMore: true
         },
         {
-            title: "Books Manager",
+            title: "Administrador de Libros",
             image: "/images/FreeBook.png",
-            description: "Study project for handling books, manages the list of books presented to the users as a gallery and the users collection.  Created with React JS, Tailwind, global application health management with Redux-Toolkit and Auth0.",
+            description: "Proyecto de estudio para el manejo de libros, gestiona la lista de libros presentados a los usuarios en una galería y la colección personal de los usuarios. Aprendí a controlar la autenticación de usuarios con Auth0 con google, desde un correo gmail, al autenticarse el usario puede gestionar su propia galería, también utilicé Redux Toolkit.",
             skill: { language: "Javascript", framework: "React js", icon: <FaReact size={20} /> },
             url: "https://free-books-collection.netlify.app",
             seeMore: true
         },
         {
-            title: "Incompany",
+            title: "Incompany SA",
             image: "/images/Incompany.png",
-            description: "Project developed for Costa Rican company Incompany, I collaborated in the creation of new section for the website.  The website was created with WordPress, using a template in Elementor.",
+            description: "Proyecto desarrollado para empresa costarricense Incompany SA, colaboré como freelancer, dando servicios profesionales en la creación de una nueva sección para el sitio web.  El sitio web fue creado con WordPress, utilizando una plantilla en Elementor.",
             skill: { language: "Wordpress", framework: "Wordpress", icon: <BsWordpress size={20} /> },
             url: "https://www.incompany.cr",
             seeMore: true
@@ -76,7 +76,7 @@ export default function Project() {
         {
             title: "Simplisoft",
             image: "/images/Simplisoft.png",
-            description: "Project developed for Costa Rican company Incompany, I collaborated in the development of the website.  The website was created with WordPress, using a template in Elementor.",
+            description: "Sitio web desarrollado para empresa costarricense Incompany. Brinde servicios profesionales como desarrollador web, realicé el diseño y construcción del sitio web utilizando elementor, siguiendo los líeanimientos gráfios dados por el cliente.",
             skill: { language: "Wordpress", framework: "Wordpress", icon: <BsWordpress size={20} /> },
             url: "https://simplisoftcr.com",
             seeMore: true
@@ -84,23 +84,23 @@ export default function Project() {
         {
             title: "Feria Nacional de la Tierra",
             image: "/images/FeriaNacionalTierra.png",
-            description: "Project developed for a non-profit association called Jóvenes Ambientalistas, I collaborated in the development of the website.  The website was created with WordPress, using a template in Elementor.",
+            description: "Mi primera experiencia laboral, tuve la oportunidad de cumplir con 3 meses de pasantía en Jóvenes Ambientalista, logré crear un sitio web para Feria Nacional de la tierra, un sitio informativo sobre la feria, construido con Elementor.",
             skill: { language: "Wordpress", framework: "Wordpress", icon: <BsWordpress size={20} /> },
             url: "",
             seeMore: false
         },
         {
-            title: "Dev Challenges",
+            title: "Restos para desarrolladores",
             image: "/images/DevChallenges.png",
-            description: "Study project inspired by Challenges from the Dev Challenges website.",
+            description: "Relicé un sitio web para recopilar varios retos de https://devchallenges.io, finalizando tres retos, el primero es Qr Code, se encarga de generar códigos QR de un url que el usuario proporcione, el segundo es Random Quote, se encarga de generar citas de autores desde una consulta fetch a una api y el último es un Multi-Step form, formulario con varios pasos.",
             skill: { language: "Typescript", framework: "React Js", icon: <FaReact size={20} /> },
             url: "https://ms-dev-challenges.netlify.app",
             seeMore: true
         },
         {
-            title: "Delivery Manager",
+            title: "Control de deliverys",
             image: "/images/deliveryManager.png",
-            description: "Order management project, use redux for the global status management of the application, also the DND-KIT library to add the animation of manually ordering the order boxes.",
+            description: "Proyecto de gestión de pedidos, use redux para la gestión global del estado de la aplicación, también la biblioteca DND-KIT para agregar la animación de ordenar manualmente las cajas de pedidos. Este proyecto me ayudó mucho en la interacción de pantallas de una forma fácil y ágil para  el usuario, dando al usuario atajos para ordenar sus pedidos.",
             skill: { language: "Typescript", framework: "React Js", icon: <FaReact size={20} /> },
             url: "https://deliverymanager.netlify.app",
             seeMore: true
@@ -135,16 +135,18 @@ export default function Project() {
             transition={{ type: "spring", delay: 1 }}
         >
             <div className="flex flex-col justify-center text-center">
-                <div className="grid place-items-center p-5">
-                    <Typography variant="h2" className="text-gray-800">Some projects</Typography>
-                    <Typography className="text-gray-700">Web projects developed and published, using agile methodologies, and focused on work as a Frontend.</Typography>
+                <div className="grid place-items-center p-5 gap-5">
+                    <Typography variant="h2" className="text-gray-800">Algunos proyectos</Typography>
+                    <Typography className="text-gray-700">
+                        Innovación y creatividad en cada línea de código: Mi viaje como ingeniero de sistemas y desarrollador web
+                    </Typography>
                 </div>
                 <div className="grid place-items-center sm:p-5 lg:p-10">
                     <Tabs value="Javascript">
                         <TabsHeader>
-                            {data.map(({ label, value, icon }) => (
-                                <Tab key={value} value={value}  >
-                                    <div className="flex items-center gap-2">
+                            {data.map(({ label, value, icon }, index) => (
+                                <Tab key={index} value={value}  >
+                                    <div className="flex items-center gap-2" key={index}>
                                         {icon}
                                         {label}
                                     </div>
@@ -152,12 +154,49 @@ export default function Project() {
                             ))}
                         </TabsHeader>
                         <TabsBody>
-                            {data.map(({ value }) => (
-                                <TabPanel key={value} value={value}>
+                            {data.map(({ value }, index) => (
+                                <TabPanel key={index} value={value}>
                                     <div className="grid grid-flow-row gap-8 my-10 p-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
                                         {myprojects && myprojects?.filter(({ skill }) => value ? skill?.language.includes(value) : true)
                                             .map(({ title, image, description, skill, seeMore, url }, index) => (
-                                                ProjectBox(title, image, description, skill, seeMore, url, index)
+                                                <Card
+                                                    key={index}
+                                                    className="w-full rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500 sm:max-w-[32rem] md:max-w-[24rem]"
+                                                >
+                                                    <CardHeader
+                                                        floated={false}
+                                                        shadow={false}
+                                                        color="transparent"
+                                                        className="m-0 rounded-none"
+                                                    >
+                                                        <img
+                                                            src={image}
+                                                            alt="proyects"
+                                                            loading="lazy"
+                                                            className=" h-52 w-full"
+                                                        />
+                                                    </CardHeader>
+                                                    <CardBody>
+                                                        <Typography variant="h4" color="blue-gray" className="text-start">
+                                                            {title}
+                                                        </Typography>
+                                                        <Typography color="gray" className="mt-3 font-light text-start">
+                                                            {description}
+                                                        </Typography>
+                                                    </CardBody>
+                                                    <CardFooter className="flex items-end justify-between">
+                                                        <Chip value={skill.framework} icon={skill.icon} />
+                                                        {seeMore && (
+                                                            <Button
+                                                                size="sm"
+                                                                className=" bg-orange-500"
+                                                                onClick={() => window.open(url, '_blank')}
+                                                            >
+                                                                See more
+                                                            </Button>
+                                                        )}
+                                                    </CardFooter>
+                                                </Card>
                                             ))}
                                     </div>
                                 </TabPanel>
@@ -171,45 +210,5 @@ export default function Project() {
 }
 
 
-function ProjectBox(title, image, description, skill, seeMore, url, index) {
 
-    return (
-        <>
-            <Card key={index} className="w-full max-w-[24rem] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500 sm:max-w-[32rem] md:max-w-[24rem]">
-                <CardHeader
-                    floated={false}
-                    shadow={false}
-                    color="transparent"
-                    className="m-0 rounded-none"
-                >
-                    <img
-                        src={image}
-                        alt="ui/ux review check"
-                        className=" h-52 w-full"
-                    />
-                </CardHeader>
-                <CardBody>
-                    <Typography variant="h4" color="blue-gray" className="text-start">
-                        {title}
-                    </Typography>
-                    <Typography color="gray" className="mt-3 font-light text-start">
-                        {description}
-                    </Typography>
-                </CardBody>
-                <CardFooter className="flex items-end justify-between">
-                    <Chip value={skill.framework} icon={skill.icon} />
-                    {seeMore && (
-                        <Button
-                            size="sm"
-                            className=" bg-orange-500"
-                            onClick={() => window.open(url, '_blank')}
-                        >
-                            See more
-                        </Button>
-                    )}
-                </CardFooter>
-            </Card>
-        </>
-    )
-}
 

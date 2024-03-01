@@ -43,17 +43,20 @@ export default function HomeSection() {
                             size="lg"
                             alt="avatar"
                             sizes={50}
+                            loading="lazy"
                             src="/images/foto1.png"
                             className="border border-orange-500 w-40 h-40 shadow-2xl bg-gray-200 ring-4 ring-gray-200 hover:ring-gray-200/30"
                         />
                     </div>
                     <div className="flex flex-col justify-center gap-5">
                         <div>
-                            <Typography variant="h4" className="mb-2 text-gray-800" textGradient>
+                            <Typography variant="h3" className="mb-2 text-gray-800" textGradient>
                                 Marlon Sánchez
                             </Typography>
-                            <Typography className="font-medium text-gray-600" textGradient>
-                                I'm a Systems Engineer and Web Developer
+                            <Typography className=" font-light text-gray-700" textGradient>
+                                Ingeniero de sistemas y desarrollador web, apasionado por transformar ideas en realidad con
+                                <br></br>
+                                innovación y creatividad en cada línea de código.
                             </Typography>
                         </div>
                         <div className="flex flex-row justify-center gap-5 ">

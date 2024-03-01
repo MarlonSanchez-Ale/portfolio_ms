@@ -1,16 +1,9 @@
 import {
     Typography,
-    Timeline,
-    TimelineItem,
-    TimelineConnector,
-    TimelineHeader,
-    TimelineIcon,
-    TimelineBody,
-    Button
 } from "@material-tailwind/react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import '../../App.css';
-import { BsDownload, BsCheckCircle } from "react-icons/bs";
+import { BsDownload } from "react-icons/bs";
 import React from "react";
 import { motion, MotionConfig } from 'framer-motion'
 
@@ -29,7 +22,7 @@ const fadeInAnimationVariants = {
 
 export default function AboutSection() {
 
-    function descargarPDF() {
+   /* function descargarPDF() {
         // Ruta al archivo PDF dentro de la carpeta "public"
         const rutaPDF = '/doc/CV - MARLON SÁNCHEZ.pdf';
 
@@ -60,7 +53,7 @@ export default function AboutSection() {
             .catch((error) => {
                 console.error('Error al descargar el PDF:', error);
             });
-    }
+    }*/
 
 
     return (
@@ -74,7 +67,9 @@ export default function AboutSection() {
                     whileInView="animate"
                     transition={{ type: "spring", delay: 1 }}
                 >
-                    <Typography variant="h2" className="text-gray-800">About me</Typography>
+                    <Typography variant="h2" className="text-gray-700">
+                        ¿Quién soy?
+                    </Typography>
                     <div className="container mx-auto md:px-20 my-10">
                         <div className="grid md:grid-cols-2 gap-10">
                             <div className="image">
@@ -82,47 +77,44 @@ export default function AboutSection() {
                                     autoplay
                                     loop
                                     src="https://lottie.host/6ccad8b3-8249-4325-8b24-67342e8043f1/1Jb0tjDqoJ.json"
-                                    style={{ height: '250px', width: '350px' }}
+                                    style={{ height: '400px', width: '350px' }}
                                 />
                             </div>
-                            <Timeline>
-                                <TimelineItem>
-                                    <TimelineConnector />
-                                    <TimelineHeader>
-                                        <TimelineIcon className="p-0">
-                                            <BsCheckCircle size={30} color="orange" />
-                                        </TimelineIcon>
-                                        <Typography variant="h5" className="text-gray-700">
-                                            Need Web Developer?
-                                        </Typography>
-                                    </TimelineHeader>
-                                    <TimelineBody className="pb-8">
-                                        <div className="flex flex-col gap-5">
-                                            <div>
-                                                <Typography className="text-orange-500 text-start">
-                                                    I can help you!
-                                                </Typography>
-                                                <Typography color="gary" className="font-normal text-gray-600 text-start">
-                                                    I'm a Systems Engineer graduated from the National University of Engineering, Nicaragua, passionate about web development with an emphasis on the front-end and willing to keep learning.
-                                                    I'm characterized by being a disciplined, responsible and dedicated person.
-                                                </Typography>
-                                            </div>
-                                            <div>
-                                                <Button
-                                                    size="lg"
-                                                    className="group relative flex items-center gap-3 overflow-hidden pr-[72px] bg-blue-gray-700"
-                                                    onClick={descargarPDF}
-                                                >
-                                                    Download CV
-                                                    <span className="absolute right-0 grid h-full w-12 place-items-center bg-blue-gray-800 transition-colors group-hover:bg-blue-gray-900">
-                                                        <BsDownload size={25} />
-                                                    </span>
-                                                </Button>
-                                            </div>
-                                        </div>
-                                    </TimelineBody>
-                                </TimelineItem>
-                            </Timeline>
+                            <div className="flex flex-col justify-center gap-5">
+                                <Typography variant="h5" className="text-gray-700 text-left">
+                                    ¿Buscas llevar tu presencia en línea al siguiente nivel?
+                                </Typography>
+                                <div className="flex flex-col justify-start gap-5">
+                                    <Typography className="text-orange-500 text-start">
+                                        ¡Déjame ayudarte!
+                                    </Typography>
+                                    <Typography color="gray" className="font-normal text-gray-600 text-start">
+                                        ¡Hola! Soy Marlon Sánchez, con una sólida formación en ingeniería de sistemas
+                                        y una amplia experiencia en el desarrollo web, me esfuerzo por crear soluciones digitales que no solo sean funcionales y eficientes,
+                                        sino también estéticamente atractivas y fáciles de usar.
+                                    </Typography>
+                                    <Typography color="gray" className="font-normal text-gray-600 text-start">
+                                        Mi enfoque es la innovación y la calidad, comprometido a brindarte un servicio personalizado que cumpla con tus necesidades y objetivos.
+                                        Ya sea que estés lanzando tu primera página web o buscando optimizar una aplicación existente, estoy aquí para hacer que tu visión cobre vida
+                                        en el mundo digital.
+                                    </Typography>
+                                    <Typography color="gray" className="font-normal text-gray-600 text-start">
+                                        ¡Contacta conmigo hoy mismo para comenzar tu viaje hacia una presencia en línea impactante y efectiva!
+                                        Juntos, podemos construir algo verdaderamente extraordinario.
+                                    </Typography>
+                                    <div>
+                                        <a
+                                            href="#contact"
+                                            className="group relative flex w-64 h-12 rounded-md items-center gap-3 overflow-hidden p-3 text-gray-200 bg-blue-gray-700">
+                                            Hablemos tu idea
+                                            <span className="absolute right-0 grid h-full w-12 place-items-center bg-blue-gray-800 text-gray-200 transition-colors group-hover:bg-blue-gray-900">
+                                                <BsDownload size={25} />
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </motion.div>
@@ -130,4 +122,3 @@ export default function AboutSection() {
         </MotionConfig>
     )
 }
-
