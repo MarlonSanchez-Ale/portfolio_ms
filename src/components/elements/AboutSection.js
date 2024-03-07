@@ -71,13 +71,14 @@ export default function AboutSection() {
                         ¿Quién soy?
                     </Typography>
                     <div className="container mx-auto md:px-20 my-10">
-                        <div className="grid md:grid-cols-2 gap-10">
-                            <div className="image">
+                        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-10">
+                            <div className="">
                                 <Player
                                     autoplay
                                     loop
                                     src="https://lottie.host/6ccad8b3-8249-4325-8b24-67342e8043f1/1Jb0tjDqoJ.json"
-                                    style={{ height: '400px', width: '350px' }}
+                                    //style={{ height: '400px', width: '350px' }}
+                                    className=" lg:h-[400px] lg:w-[400px] sm:h-[300px] sm:w-[300px]"
                                 />
                             </div>
                             <div className="flex flex-col justify-center gap-5">
@@ -106,7 +107,7 @@ export default function AboutSection() {
                                         <a
                                             href="#contact"
                                             className="group relative flex w-64 h-12 rounded-md items-center gap-3 overflow-hidden p-3 text-gray-200 bg-blue-gray-700">
-                                            Hablemos tu idea
+                                            Hablemos ahora
                                             <span className="absolute right-0 grid h-full w-12 place-items-center bg-blue-gray-800 text-gray-200 transition-colors group-hover:bg-blue-gray-900">
                                                 <BsDownload size={25} />
                                             </span>

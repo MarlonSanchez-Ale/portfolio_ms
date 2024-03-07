@@ -67,7 +67,7 @@ export default function Contact() {
 
 
     return (
-        <section id="contact" className=" py-32 bg-white sm:px-10">
+        <section id="contact" className="py-32 bg-white sm:px-10">
             <motion.div
                 className="flex flex-col justify-center items-center gap-10 text-center"
                 variants={fadeInAnimationVariants}
@@ -82,8 +82,8 @@ export default function Contact() {
                         Juntos, podemos construir algo verdaderamente extraordinario.
                     </Typography>
                 </div>
-                <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-center gap-5 border border-gray-200 rounded-md p-10 shadow-md">
-                    <div className="grid sm:grid-cols-1 md:grid-cols-2 items-center sm:w-full md:w-[90vh] rounded-md gap-5">
+                <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-center gap-5 border sm:w-full lg:w-[80vh] border-gray-200 rounded-md p-10 shadow-md">
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2 items-center w-full rounded-md gap-5">
                         <div>
                             <Input
                                 label="Nombre"

@@ -44,7 +44,7 @@ export default function HomeSection() {
                             alt="avatar"
                             sizes={50}
                             loading="lazy"
-                            src="/images/foto1.png"
+                            src="./images/foto1.png"
                             className="border border-orange-500 w-40 h-40 shadow-2xl bg-gray-200 ring-4 ring-gray-200 hover:ring-gray-200/30"
                         />
                     </div>
@@ -53,10 +53,10 @@ export default function HomeSection() {
                             <Typography variant="h3" className="mb-2 text-gray-800" textGradient>
                                 Marlon Sánchez
                             </Typography>
-                            <Typography className=" font-light text-gray-700" textGradient>
-                                Ingeniero de sistemas y desarrollador web, apasionado por transformar ideas en realidad con
-                                <br></br>
-                                innovación y creatividad en cada línea de código.
+                            <Typography className=" font-light text-gray-700 lg:px-5" textGradient>
+                                Ingeniero de Sistemas y Desarrollador Web, comprometido en convertir ideas en realidades
+                                digitales mediante innovación y creatividad en cada línea de código que escribo. Mi pasión es dar
+                                vida a proyectos con soluciones tecnológicas avanzadas y experiencias únicas en la web.
                             </Typography>
                         </div>
                         <div className="flex flex-row justify-center gap-5 ">
@@ -74,7 +74,7 @@ export default function HomeSection() {
                             </IconButton>
                         </div>
                         <div className="grid place-items-center my-10">
-                            <div className="grid gap-5 sm:grid-cols-3 md:grid-flow-col" >
+                            <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-flow-col" >
                                 <Chip value="Javascript" className=" hover:bg-orange-500" icon={<IoLogoJavascript size={20} />} />
                                 <Chip value="Typescript" className="hover:bg-orange-500" icon={<TbBrandTypescript size={20} />} />
                                 <Chip value="React Js" className=" hover:bg-orange-500" icon={<FaReact size={20} />} />
@@ -83,7 +83,7 @@ export default function HomeSection() {
                                 <Chip value="CSS" className=" hover:bg-orange-500" icon={<BsFiletypeCss size={20} />} />
                                 <Chip value="Talwind" className=" hover:bg-orange-500" icon={<SiTailwindcss size={20} />} />
                                 <Chip value="Material UI" className="hover:bg-orange-500" icon={<SiMui size={18} />} />
-                                <Chip value="Wordpress" className="hover:bg-orange-500" icon={<BsWordpress size={18} />} />
+                                <Chip value="Wordpress" className="hover:bg-orange-500 w-full" icon={<BsWordpress size={18} />} />
                             </div>
                         </div>
                     </div>

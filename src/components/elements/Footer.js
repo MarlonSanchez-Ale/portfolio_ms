@@ -20,7 +20,7 @@ export default function Footer() {
                     <Avatar
                         size="lg"
                         alt="avatar"
-                        src="/images/foto2.png"
+                        src="./images/foto2.png"
                         loading="lazy"
                         className="border border-orange-500 w-28 h-28 shadow-2xl bg-gray-200 ring-4 ring-gray-500/30 hover:ring-gray-200/30"
                     />
