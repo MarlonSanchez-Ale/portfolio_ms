@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2'
 
 const fadeInAnimationVariants = {
     initial: {
@@ -25,11 +26,14 @@ const fadeInAnimationVariants = {
 
 const schema = yup
     .object({
-        user_name: yup.string().required(),
-        user_subject: yup.string().required(),
-        user_email: yup.string().email().required(),
-        cellphone: yup.number().integer().required(),
-        message: yup.string().required()
+        user_name: yup.string('Nombre de usuario no valido.').required('Ingrese su nombre').matches(
+        /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/,
+        "Enter valid first name !"
+      ),
+        user_subject: yup.string().required('Ingrese asunto del mensaje'),
+        user_email: yup.string().email('Email, invalido').required('Ingrese su correo'),
+        cellphone: yup.number('Número de celular invalido').integer('Número de celular invalido').required('Ingrese su número telefónico'),
+        message: yup.string().required('Ingrese su mensaje')
     })
     .required()
 
@@ -40,29 +44,36 @@ export default function Contact() {
         register,
         handleSubmit,
         formState: { errors },
-        reset, 
-        form
+        reset,
     } = useForm({
         resolver: yupResolver(schema),
     })
-    
+
     const onSubmit = () => {
 
         emailjs
-            .sendForm('service_n6uj2ci', 'contact_form', 'form', {
-                publicKey: 'Cabs0zO-cptO-38B1',
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    console.log(form)
-                    reset()
-                },
+            .sendForm('service_n6uj2ci', 'contact_form', 'form', { publicKey: 'Cabs0zO-cptO-38B1' })
+            .then(() => {
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "¡Gracias por tu mensaje!",
+                    text: `Me esforzaré por responderte lo antes posible. 
+                        ¡Que tengas un gran día!"`,
+                    showConfirmButton: true,
+                });
+                reset()
+            },
                 (error) => {
-                    console.log('FAILED...', error.text);
+                    Swal.fire({
+                        position: "center",
+                        icon: "error",
+                        title: "Error de envío",
+                        text: error.text,
+                        showConfirmButton: true,
+                    });
                 },
             );
-
     }
 
 
@@ -90,7 +101,7 @@ export default function Contact() {
                                 type="text"
                                 {...register('user_name')}
                             />
-                            <p>{errors.user_name?.message}</p>
+                            <p className=" text-sm text-red-600">{errors.user_name?.message}</p>
                         </div>
                         <div>
                             <Input
