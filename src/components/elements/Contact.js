@@ -6,11 +6,13 @@ import {
 } from "@material-tailwind/react";
 import { motion } from 'framer-motion'
 import { BsChatSquareTextFill } from "react-icons/bs";
-import { useForm } from "react-hook-form"
+import { useForm, Controller } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 const fadeInAnimationVariants = {
     initial: {
@@ -27,12 +29,12 @@ const fadeInAnimationVariants = {
 const schema = yup
     .object({
         user_name: yup.string('Nombre de usuario no valido.').required('Ingrese su nombre').matches(
-        /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/,
-        "Enter valid first name !"
-      ),
+            /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/,
+            "Enter valid first name !"
+        ),
         user_subject: yup.string().required('Ingrese asunto del mensaje'),
         user_email: yup.string().email('Email, invalido').required('Ingrese su correo'),
-        cellphone: yup.number('Número de celular invalido').integer('Número de celular invalido').required('Ingrese su número telefónico'),
+        cellphone: yup.string().required('Ingrese su número telefónico'),
         message: yup.string().required('Ingrese su mensaje')
     })
     .required()
@@ -45,11 +47,13 @@ export default function Contact() {
         handleSubmit,
         formState: { errors },
         reset,
+        control,
+        setValue,
     } = useForm({
         resolver: yupResolver(schema),
     })
 
-    const onSubmit = () => {
+    const onSubmit = (data) => {
 
         emailjs
             .sendForm('service_n6uj2ci', 'contact_form', 'form', { publicKey: 'Cabs0zO-cptO-38B1' })
@@ -59,7 +63,7 @@ export default function Contact() {
                     icon: "success",
                     title: "¡Gracias por tu mensaje!",
                     text: `Me esforzaré por responderte lo antes posible. 
-                        ¡Que tengas un gran día!"`,
+                         ¡Que tengas un gran día!"`,
                     showConfirmButton: true,
                 });
                 reset()
@@ -76,6 +80,9 @@ export default function Contact() {
             );
     }
 
+    const handlePhoneBlur = (value) => {
+        setValue('cellphone', value);
+    };
 
     return (
         <section id="contact" className="py-32 bg-white sm:px-10">
@@ -120,14 +127,32 @@ export default function Contact() {
                             <p>{errors.user_email?.message}</p>
                         </div>
                         <div>
-                            <Input
-                                label="Número de teléfono"
-                                type="tel"
-                                {...register('cellphone')}
+                            <Controller
+                                name="cellphone"
+                                control={control}
+                                defaultValue=""
+                                render={({ field }) => (
+                                    <PhoneInput
+                                        {...field}
+                                        country="us"
+                                        inputProps={{
+                                            name: 'cellphone',
+                                            required: true,
+                                            onBlur: (e) => handlePhoneBlur(e.target.value)
+                                        }}
+                                        placeholder="Número telefonico"
+                                        inputStyle={{
+                                            width: "100%"
+                                        }}
+                                    />
+                                )}
                             />
                             <p>{errors.cellphone?.message}</p>
                         </div>
                     </div>
+
+
+
                     <Textarea label="Message" {...register('message')} />
                     <Button size="lg" type="submit" className="bg-gray-800">Enviar mensaje</Button>
                 </form>
