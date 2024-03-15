@@ -103,7 +103,7 @@ export default function AboutSection() {
                                     </Typography>
                                     <Typography color="gray" className="font-normal text-gray-600 text-start">
                                         ¡Contacta conmigo hoy mismo para comenzar tu viaje hacia una presencia en línea impactante y efectiva!
-                                        Juntos, podemos construir algo verdaderamente extraordinario.
+                                        Juntos podemos construir algo verdaderamente extraordinario.
                                     </Typography>
                                     <div>
                                         <a
