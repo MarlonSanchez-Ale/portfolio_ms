@@ -50,7 +50,7 @@ export default function Project() {
             seeMore: false
         },
         {
-            title: "Administrador de tareas",
+            title: "Administrador de Tareas",
             image: "/images/TaskManager.png",
             description: "Proyecto de estudio, aprendí mucho sobre la administración de estados globales con redux toolkit, mejoré mis conocimientos en Tailwinds para la administración de temas, colores y estilos. El diseño está centrado en la creación rápida de tareas y el control de estados de la actividad.",
             skill: { language: "Javascript", framework: "React js", icon: <FaReact size={20} /> },
@@ -98,7 +98,7 @@ export default function Project() {
             seeMore: true
         },
         {
-            title: "Restos para desarrolladores",
+            title: "Restos para Desarrolladores",
             image: "/images/DevChallenges.png",
             description: "Relicé un sitio web para recopilar varios retos de https://devchallenges.io, finalizando tres retos, el primero es Qr Code, se encarga de generar códigos QR de un url que el usuario proporcione, el segundo es Random Quote, se encarga de generar citas de autores desde una consulta fetch a una api y el último es un Multi-Step form, formulario con varios pasos.",
             skill: { language: "Typescript", framework: "React Js", icon: <FaReact size={20} /> },
@@ -106,7 +106,7 @@ export default function Project() {
             seeMore: true
         },
         {
-            title: "Control de deliverys",
+            title: "Control de Deliverys",
             image: "/images/deliveryManager.png",
             description: "Proyecto de gestión de pedidos, use redux para la gestión global del estado de la aplicación, también la biblioteca DND-KIT para agregar la animación de ordenar manualmente las cajas de pedidos. Este proyecto me ayudó mucho en la interacción de pantallas de una forma fácil y ágil para  el usuario, dando al usuario atajos para ordenar sus pedidos.",
             skill: { language: "Typescript", framework: "React Js", icon: <FaReact size={20} /> },
