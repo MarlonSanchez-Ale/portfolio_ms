@@ -165,12 +165,12 @@ export default function Project() {
                             <TabsBody>
                                 {data.map(({ value }, index) => (
                                     <TabPanel key={index} value={value}>
-                                        <div className="grid grid-flow-row gap-8 my-10 p-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+                                        <div className="grid grid-flow-row gap-8 my-10 lg:p-10 sm:p-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
                                             {myprojects && myprojects?.filter(({ skill }) => value ? skill?.language.includes(value) : true)
                                                 .map(({ title, image, description, skill, seeMore, url }, index) => (
                                                     <Card
                                                         key={index}
-                                                        className="w-full rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500 sm:max-w-[32rem] md:max-w-[24rem]"
+                                                        className="w-full rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500 sm:max-w-[44rem] md:max-w-[24rem]"
                                                     >
                                                         <CardHeader
                                                             floated={false}
