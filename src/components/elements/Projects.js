@@ -90,6 +90,14 @@ export default function Project() {
             seeMore: false
         },
         {
+            title: "TakTik Mentor",
+            image: "/images/Taktikmentor hero.png",
+            description: "Colaboré con Taktik Mentor en el desarrollo de su presencia en línea mediante la creación de una landing page utilizando WordPress. Trabajando en estrecha colaboración con el equipo de Taktik Mentor, diseñé y desarrollé una página web que reflejara la identidad de la marca y proporcionara una experiencia de usuario óptima.",
+            skill: { language: "Wordpress", framework: "Wordpress", icon: <BsWordpress size={20} /> },
+            url: "https://taktikmentor.com/",
+            seeMore: true
+        },
+        {
             title: "Restos para desarrolladores",
             image: "/images/DevChallenges.png",
             description: "Relicé un sitio web para recopilar varios retos de https://devchallenges.io, finalizando tres retos, el primero es Qr Code, se encarga de generar códigos QR de un url que el usuario proporcione, el segundo es Random Quote, se encarga de generar citas de autores desde una consulta fetch a una api y el último es un Multi-Step form, formulario con varios pasos.",
