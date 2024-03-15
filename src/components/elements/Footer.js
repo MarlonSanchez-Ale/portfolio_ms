@@ -9,7 +9,7 @@ import { MdOutgoingMail } from 'react-icons/md'
 export default function Footer() {
 
     const UrlInstagram = "https://instagram.com/marlonsanchez583?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="
-    const UrlLinkedin = "https://www.linkedin.com/in/marlon-josué-sánchez-alemán-84688b1b6"
+    const UrlLinkedin = "https://www.linkedin.com/in/marlonsanchezal/"
     const UrlWhatsapp = "https://wa.link/0wbnnc"
     const UrlGithub = "https://github.com/MarlonSanchez-Ale"
 
