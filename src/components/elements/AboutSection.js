@@ -57,11 +57,13 @@ export default function AboutSection() {
 
 
     return (
+        
+        <section id="aboutme" className=" py-40 bg-white sm:px-10">
         <MotionConfig transition={{ duration: 1 }}>
-            <section className=" py-40 bg-white sm:px-10">
                 <motion.div
                     className="flex flex-col justify-center gap-3 text-center"
                     layoutScroll
+                    id="aboutme"
                     variants={fadeInAnimationVariants}
                     initial="initial"
                     whileInView="animate"
@@ -119,7 +121,7 @@ export default function AboutSection() {
                         </div>
                     </div>
                 </motion.div>
-            </section>
         </MotionConfig>
+        </section>
     )
 }

@@ -1,11 +1,13 @@
-import { Avatar, Typography, IconButton, Chip } from "@material-tailwind/react"
-import { BsInstagram, BsLinkedin, BsFiletypeHtml, BsFiletypeCss, BsWordpress, BsWhatsapp, BsGithub } from "react-icons/bs";
-import { IoLogoJavascript } from 'react-icons/io'
-import { TbBrandTypescript } from "react-icons/tb";
-import { FaReact } from 'react-icons/fa'
-import { TbBrandNextjs } from 'react-icons/tb'
-import { SiMui, SiTailwindcss } from 'react-icons/si'
+import { Avatar, Typography, IconButton} from "@material-tailwind/react"
+import { BsInstagram, BsLinkedin, BsWhatsapp, BsGithub } from "react-icons/bs";
+//import { IoLogoJavascript } from 'react-icons/io'
+//BsFiletypeHtml, BsFiletypeCss, BsWordpress,
+//import { TbBrandTypescript } from "react-icons/tb";
+//import { FaReact } from 'react-icons/fa'
+//import { TbBrandNextjs } from 'react-icons/tb'
+//import { SiMui, SiTailwindcss } from 'react-icons/si'
 import { motion, MotionConfig } from 'framer-motion'
+import { BsPersonArmsUp, BsFillRocketTakeoffFill, BsFillEnvelopeFill } from "react-icons/bs";
 
 const fadeInAnimationVariants = {
     initial: {
@@ -53,7 +55,7 @@ export default function HomeSection() {
                             <Typography variant="h3" className="mb-2 text-gray-800" textGradient>
                                 Marlon Sánchez
                             </Typography>
-                            <Typography className=" font-light text-gray-700 lg:px-20" textGradient>
+                            <Typography className=" font-light text-gray-700 lg:px-48" textGradient>
                                 Ingeniero de Sistemas y Desarrollador Web, comprometido en convertir ideas en realidades
                                 digitales mediante innovación y creatividad en cada línea de código que escribo. Mi pasión es dar
                                 vida a proyectos con soluciones tecnológicas avanzadas y experiencias únicas en la web.
@@ -74,6 +76,44 @@ export default function HomeSection() {
                             </IconButton>
                         </div>
                         <div className="grid place-items-center my-10">
+                            <div className="grid gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-flow-col" >
+                                <a
+                                    href="#aboutme"
+                                    className="group relative flex w-52 items-center gap-3  overflow-hidden bg-blue-gray-900 hover:bg-orange-500 p-4 rounded-md shadow-md">
+                                    Conoce sobre mí
+                                    <span className="absolute right-0 w-12 grid place-items-center bg-blue-gray-800 group-hover:bg-orange-400 h-full">
+                                        <BsPersonArmsUp color="white" size={25} />
+                                    </span>
+                                </a>
+                                <a
+                                    href="#projects"
+                                    className="group relative flex w-52 items-center gap-3  overflow-hidden bg-blue-gray-900 hover:bg-orange-500 p-4 rounded-md shadow-md">
+                                    Mis proyectos
+                                    <span className="absolute right-0 w-12 grid place-items-center bg-blue-gray-800 group-hover:bg-orange-400 h-full">
+                                        <BsFillRocketTakeoffFill color="white" size={25} />
+                                    </span>
+                                </a>
+                                <a
+                                    href="#contact"
+                                    className="group relative flex w-52 items-center gap-3  overflow-hidden bg-orange-500 hover:bg-blue-gray-800 p-4 rounded-md shadow-md">
+                                    Contactar ahora
+                                    <span className="absolute right-0 w-12 grid place-items-center bg-orange-400 group-hover:bg-blue-gray-700 h-full">
+                                        <BsFillEnvelopeFill color="white" size={25} />
+                                    </span>
+                                </a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </motion.section>
+        </MotionConfig>
+    )
+}
+
+/*
+<div className="grid place-items-center my-10">
                             <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-flow-col" >
                                 <Chip value="Javascript" className=" hover:bg-orange-500" icon={<IoLogoJavascript size={20} />} />
                                 <Chip value="Typescript" className="hover:bg-orange-500" icon={<TbBrandTypescript size={20} />} />
@@ -86,10 +126,5 @@ export default function HomeSection() {
                                 <Chip value="Wordpress" className="hover:bg-orange-500 w-full" icon={<BsWordpress size={18} />} />
                             </div>
                         </div>
-                    </div>
-                </div>
-            </motion.section>
-        </MotionConfig>
-    )
-}
 
+*/

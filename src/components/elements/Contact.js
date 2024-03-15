@@ -2,7 +2,7 @@ import {
     Typography,
     Button,
     Input,
-    Textarea
+    Textarea,
 } from "@material-tailwind/react";
 import { motion } from 'framer-motion'
 import { BsChatSquareTextFill } from "react-icons/bs";

@@ -135,86 +135,88 @@ export default function Project() {
     ];
 
     return (
-        <motion.section
-            className="py-32"
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            transition={{ type: "spring", delay: 1 }}
-        >
-            <div className="flex flex-col justify-center text-center">
-                <div className="grid place-items-center p-5 gap-5">
-                    <Typography variant="h2" className="text-gray-800">Algunos proyectos</Typography>
-                    <Typography className="text-gray-700">
-                        Innovación y creatividad en cada línea de código: Mi viaje como ingeniero de sistemas y desarrollador web
-                    </Typography>
-                </div>
-                <div className="grid place-items-center sm:p-5 lg:p-10">
-                    <Tabs value="Javascript">
-                        <TabsHeader>
-                            {data.map(({ label, value, icon }, index) => (
-                                <Tab key={index} value={value}  >
-                                    <div className="flex items-center gap-2" key={index}>
-                                        {icon}
-                                        {label}
-                                    </div>
-                                </Tab>
-                            ))}
-                        </TabsHeader>
-                        <TabsBody>
-                            {data.map(({ value }, index) => (
-                                <TabPanel key={index} value={value}>
-                                    <div className="grid grid-flow-row gap-8 my-10 p-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-                                        {myprojects && myprojects?.filter(({ skill }) => value ? skill?.language.includes(value) : true)
-                                            .map(({ title, image, description, skill, seeMore, url }, index) => (
-                                                <Card
-                                                    key={index}
-                                                    className="w-full rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500 sm:max-w-[32rem] md:max-w-[24rem]"
-                                                >
-                                                    <CardHeader
-                                                        floated={false}
-                                                        shadow={false}
-                                                        color="transparent"
-                                                        className="m-0 rounded-none"
+        <section id="projects">
+            <motion.section
+                className="py-32"
+                variants={fadeInAnimationVariants}
+                initial="initial"
+                whileInView="animate"
+                transition={{ type: "spring", delay: 1 }}
+            >
+                <div className="flex flex-col justify-center text-center">
+                    <div className="grid place-items-center p-5 gap-5">
+                        <Typography variant="h2" className="text-gray-800">Algunos proyectos</Typography>
+                        <Typography className="text-gray-700">
+                            Innovación y creatividad en cada línea de código: Mi viaje como ingeniero de sistemas y desarrollador web
+                        </Typography>
+                    </div>
+                    <div className="grid place-items-center sm:p-5 lg:p-10">
+                        <Tabs value="Javascript">
+                            <TabsHeader>
+                                {data.map(({ label, value, icon }, index) => (
+                                    <Tab key={index} value={value}  >
+                                        <div className="flex items-center gap-2" key={index}>
+                                            {icon}
+                                            {label}
+                                        </div>
+                                    </Tab>
+                                ))}
+                            </TabsHeader>
+                            <TabsBody>
+                                {data.map(({ value }, index) => (
+                                    <TabPanel key={index} value={value}>
+                                        <div className="grid grid-flow-row gap-8 my-10 p-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+                                            {myprojects && myprojects?.filter(({ skill }) => value ? skill?.language.includes(value) : true)
+                                                .map(({ title, image, description, skill, seeMore, url }, index) => (
+                                                    <Card
+                                                        key={index}
+                                                        className="w-full rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500 sm:max-w-[32rem] md:max-w-[24rem]"
                                                     >
-                                                        <img
-                                                            src={image}
-                                                            alt="proyects"
-                                                            loading="lazy"
-                                                            className=" h-52 w-full"
-                                                        />
-                                                    </CardHeader>
-                                                    <CardBody>
-                                                        <Typography variant="h4" color="blue-gray" className="text-start">
-                                                            {title}
-                                                        </Typography>
-                                                        <Typography color="gray" className="mt-3 font-light text-start">
-                                                            {description}
-                                                        </Typography>
-                                                    </CardBody>
-                                                    <CardFooter className="flex items-end justify-between">
-                                                        <Chip value={skill.framework} icon={skill.icon} />
+                                                        <CardHeader
+                                                            floated={false}
+                                                            shadow={false}
+                                                            color="transparent"
+                                                            className="m-0 rounded-none"
+                                                        >
+                                                            <img
+                                                                src={image}
+                                                                alt="proyects"
+                                                                loading="lazy"
+                                                                className=" h-52 w-full"
+                                                            />
+                                                        </CardHeader>
+                                                        <CardBody>
+                                                            <Typography variant="h4" color="blue-gray" className="text-start">
+                                                                {title}
+                                                            </Typography>
+                                                            <Typography color="gray" className="mt-3 font-light text-start">
+                                                                {description}
+                                                            </Typography>
+                                                        </CardBody>
+                                                        <CardFooter className="flex items-end justify-between">
+                                                            <Chip value={skill.framework} icon={skill.icon} />
 
-                                                        {seeMore && (
-                                                            <Button
-                                                                size="sm"
-                                                                className=" bg-orange-500"
-                                                                onClick={() => window.open(url, '_blank')}
-                                                            >
-                                                                Ver más
-                                                            </Button>
-                                                        )}
-                                                    </CardFooter>
-                                                </Card>
-                                            ))}
-                                    </div>
-                                </TabPanel>
-                            ))}
-                        </TabsBody>
-                    </Tabs>
+                                                            {seeMore && (
+                                                                <Button
+                                                                    size="sm"
+                                                                    className=" bg-orange-500"
+                                                                    onClick={() => window.open(url, '_blank')}
+                                                                >
+                                                                    Ver más
+                                                                </Button>
+                                                            )}
+                                                        </CardFooter>
+                                                    </Card>
+                                                ))}
+                                        </div>
+                                    </TabPanel>
+                                ))}
+                            </TabsBody>
+                        </Tabs>
+                    </div>
                 </div>
-            </div>
-        </motion.section>
+            </motion.section>
+        </section>
     )
 }
 
