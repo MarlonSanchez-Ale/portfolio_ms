@@ -53,7 +53,7 @@ export default function HomeSection() {
                             <Typography variant="h3" className="mb-2 text-gray-800" textGradient>
                                 Marlon Sánchez
                             </Typography>
-                            <Typography className=" font-light text-gray-700 lg:px-5" textGradient>
+                            <Typography className=" font-light text-gray-700 lg:px-20" textGradient>
                                 Ingeniero de Sistemas y Desarrollador Web, comprometido en convertir ideas en realidades
                                 digitales mediante innovación y creatividad en cada línea de código que escribo. Mi pasión es dar
                                 vida a proyectos con soluciones tecnológicas avanzadas y experiencias únicas en la web.

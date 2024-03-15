@@ -194,13 +194,14 @@ export default function Project() {
                                                     </CardBody>
                                                     <CardFooter className="flex items-end justify-between">
                                                         <Chip value={skill.framework} icon={skill.icon} />
+
                                                         {seeMore && (
                                                             <Button
                                                                 size="sm"
                                                                 className=" bg-orange-500"
                                                                 onClick={() => window.open(url, '_blank')}
                                                             >
-                                                                See more
+                                                                Ver más
                                                             </Button>
                                                         )}
                                                     </CardFooter>
