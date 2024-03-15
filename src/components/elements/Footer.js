@@ -29,7 +29,7 @@ export default function Footer() {
                             Marlon Sánchez
                         </Typography>
                         <Typography className="font-medium  text-gray-700" textGradient>
-                            También me puedes seguir o contactar en mis redes sociales.
+                            También me puedes seguir o contactar en mis redes sociales
                         </Typography>
                         <div className="flex flex-row justify-center gap-4">
                             <MdOutgoingMail size={25} color="orange" />

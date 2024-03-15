@@ -36,7 +36,7 @@ export default function Project() {
         {
             title: "Puntos Luz",
             image: "/images/PuntosLuz.png",
-            description: "Estuvé a cargo del soporte y mantenimiento de la aplicación web Puntos Luz. Colaboré en la reorganización de los endpoints y reconstrucción de los mismos para un mejor funcionamiento y corrección de errores, el frontend fue actualizado en pro de la experiencia de usuario.",
+            description: "Tuve la oportunidad de ser responsable del soporte y mantenimiento de la aplicación web Puntos Luz. Colaboré en la reorganización de los endpoints y reconstrucción de los mismos para un mejor funcionamiento y corrección de errores, el frontend fue actualizado en pro de la experiencia de usuario.",
             skill: { language: "Javascript", framework: "Next js", icon: <TbBrandNextjs size={20} /> },
             url: "",
             seeMore: false

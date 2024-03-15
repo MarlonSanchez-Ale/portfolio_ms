@@ -97,7 +97,7 @@ export default function Contact() {
                     <BsChatSquareTextFill size={50} color="orange" />
                     <Typography variant="h2" className="text-gray-800">Contame más sobre tu idea</Typography>
                     <Typography className="text-gray-700">
-                        Juntos, podemos construir algo verdaderamente extraordinario.
+                        Juntos, podemos construir algo verdaderamente extraordinario
                     </Typography>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-center gap-5 border sm:w-full lg:w-[80vh] border-gray-200 rounded-md p-10 shadow-md">
@@ -120,7 +120,7 @@ export default function Contact() {
                         </div>
                         <div>
                             <Input
-                                label="Correo Electronico"
+                                label="Correo Electrónico"
                                 type="email"
                                 {...register('user_email')}
                             />
@@ -153,7 +153,7 @@ export default function Contact() {
 
 
 
-                    <Textarea label="Message" {...register('message')} />
+                    <Textarea label="Mensaje" {...register('message')} />
                     <Button size="lg" type="submit" className="bg-gray-800">Enviar mensaje</Button>
                 </form>
             </motion.div>
