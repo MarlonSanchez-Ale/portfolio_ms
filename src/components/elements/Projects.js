@@ -95,7 +95,7 @@ export default function Project() {
             description: "Colaboré con Taktik Mentor en el desarrollo de su presencia en línea mediante la creación de una landing page utilizando WordPress. Trabajando en estrecha colaboración con el equipo de Taktik Mentor, diseñé y desarrollé una página web que reflejara la identidad de la marca y proporcionara una experiencia de usuario óptima.",
             skill: { language: "Wordpress", framework: "Wordpress", icon: <BsWordpress size={20} /> },
             url: "https://taktikmentor.com/",
-            seeMore: true
+            seeMore: false
         },
         {
             title: "Restos para Desarrolladores",

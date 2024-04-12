@@ -56,7 +56,7 @@ export default function Contact() {
     const onSubmit = (data) => {
 
         emailjs
-            .sendForm('service_n6uj2ci', 'contact_form', 'form', { publicKey: 'Cabs0zO-cptO-38B1' })
+            .sendForm('service_sq70iq9', 'contact_form', 'form', { publicKey: 'Cabs0zO-cptO-38B1' })
             .then(() => {
                 Swal.fire({
                     position: "center",
@@ -150,8 +150,6 @@ export default function Contact() {
                             <p>{errors.cellphone?.message}</p>
                         </div>
                     </div>
-
-
 
                     <Textarea label="Mensaje" {...register('message')} />
                     <Button size="lg" type="submit" className="bg-gray-800">Enviar mensaje</Button>
