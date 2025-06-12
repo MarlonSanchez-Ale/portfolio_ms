@@ -7,7 +7,6 @@ export default function Portfolio() {
     return (
         <>
             <HomeSection />
-            <AboutSection />
             <Project />
             <Contact />
             <Footer />
